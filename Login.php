@@ -22,22 +22,25 @@ if (isset($_POST["username"])|| isset($_POST["password"])){
     exit();
     }
     else {
-      echo "Invalid username or password";
+      echo "<h4>Invalid username or password<h4>";
     }
   }
  ?>
+
 <html>
 <head>
   <title="LOGIN FORM"></title>
   <style>
               body{
-              	background-color: lightgreen;
-
+              	background-image: url(https://weblizar.com/wp-content/uploads/2018/08/background.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
               }
 
               h1{
               	text-align: center;
               	font_size:50px;
+                font-style: oblique;
               }
               form{
               	margin: 20px auto;
@@ -48,30 +51,40 @@ if (isset($_POST["username"])|| isset($_POST["password"])){
               	padding: 10px;
               	font-size: inherit;
               }
-              input[type="text"]{
-
+              input[type=text]{
+                border-radius: 4px;
               	border: 1px solid blue;
+                font-style: italic;
+                font-family: inherit;
               }
-              input[type="password"]{
-
+              input[type=password]{
+                border-radius: 4px;
               	border: 1px solid blue;
+                font-style: italic;
+                font-family: inherit;
               }
-              input[type="submit"]{
-              	width: 80px;
+              input[type=submit]{
+              	width: 100px;
               	height: 40px;
               	background:blue;
               	color:white;
+                float: center;
+                border-radius: 10px;
+              }
+              input[type=submit]:hover {
+                background-color: lightblue;
               }
   </style>
 
 </head>
-<body>
-  <h1>Login Form</h1><br>
+<body><br>
+  <h1><u>LOGIN FORM</u></h1><br>
 <form action="<?php $_PHP_SELF ?>" method="post">
-  Username:   <input type="text" name="username"><br><br>
-  Password:   <input type="password" name="password"><br><br>
+  Username:   <input type="text" name="username" placeholder="Enter Username"><br><br>
+  Password:   <input type="password" name="password" placeholder="Enter Password"><br><br>
   <input type="submit" value="Login">
 
 </form>
 </body>
 </html>
+
